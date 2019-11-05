@@ -24,7 +24,7 @@ from Task_app import views
 from rest_framework import routers
 from Task_app.views import Dataviewset#,Fileviewset
 router=routers.DefaultRouter()
-router.register('<int:pk>',Dataviewset)
+router.register('',Dataviewset)
 #router.register('upload/',Fileviewset)
 from Task_app import views
 

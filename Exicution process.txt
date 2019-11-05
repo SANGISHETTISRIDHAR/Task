@@ -1,0 +1,14 @@
+1) first of all please clone this task from git url:https://github.com/SANGISHETTISRIDHAR/Task.
+2) Run this task and we will get "https://127.0.0.1:8000/
+3)just give 's' after the url like: ex:- ("https://127.0.0.1:8000/s)
+3)we will get an html home page. in this page we will upload "template.xlsx" file.
+	(by default i alredy uploaded xlsx file in this DB).
+4)In this page some Hyperlinks are there each hyperkink for specified operation.
+
+	Ex:1) "get jsondata" for getting jsondata and it will display in HTML page.
+	   2)"Show details" for getting the data from database from xlsx(3wla) in the HTML Page.
+	   3)"createdapi" for To created Api Basic CRUD Operations by using viewset.
+
+Note: I have atteched images for understanding purpose.
+	 
+  

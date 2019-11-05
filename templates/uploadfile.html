@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<form action="/save/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table>
+    <tr><th>Select your File:<input type="file" name="doc"></th> </tr>
+    <tr><th><button type="submit">Submit</button> </th></tr>
+</table>
+</form>
+
+
+<a href="/getjson/">get Json data</a>
+<br>
+<br>
+<a href="/show/">Show details</a><br>
+<a href="/api/">Crated Api</a>
+
+{% if data %}
+<table border="2" align="center">
+    <tr>
+        <th>St_Date</th>
+        <th>End_Date</th>
+        <th>Task Desp</th>
+        <th>3WLA Task Description</th>
+        <th>Resources</th>
+        <th>Quantity</th>
+        <th>Responsible Manager</th>
+        <th>Location</th>
+        <th>Chainage From</th>
+        <th>Chainage To</th>
+    </tr>
+    {% for x in data %}
+        <tr>
+            <th>{{ x.St_date }}</th>
+            <th>{{ x.End_date }}</th>
+            <th>{{ x.Task_Id }}</th>
+            <th>{{ x.Task_desp }}</th>
+            <th>{{ x.Wla_task_des }}</th>
+            <th>{{ x.Resources }}</th>
+            <th>{{ x.Quantity }}</th>
+            <th>{{ x.Responsible_manager }}</th>
+            <th>{{ x.Location }}</th>
+            <th>{{ x.Chainage_from }}</th>
+            <th>{{ x.Chainage_To }}</th>
+        </tr>
+
+    {% endfor %}
+</table>
+{% endif %}
+{% if messages %}
+{% for x in messages %}
+
+{{ x }}
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
